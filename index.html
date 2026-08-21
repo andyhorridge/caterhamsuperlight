@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta name="theme-color" content="#080a0b">
+
+    <title>Caterham Superlight | C7 DFH</title>
+
+    <meta
+        name="description"
+        content="Caterham Superlight C7 DFH. Full website coming soon."
+    >
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            background: #080a0b;
+            color: #ffffff;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.20),
+                    rgba(0, 0, 0, 0.72)
+                ),
+                url("hero.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+
+            width: 90%;
+            max-width: 900px;
+
+            padding: 40px 20px;
+        }
+
+        .seven {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 76px;
+            height: 76px;
+
+            margin-bottom: 25px;
+
+            border: 3px solid #8bdc4a;
+            border-radius: 50%;
+
+            color: #8bdc4a;
+
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        h1 {
+            font-size: clamp(42px, 7vw, 90px);
+            font-weight: 800;
+
+            letter-spacing: 4px;
+            line-height: 0.95;
+
+            text-transform: uppercase;
+
+            text-shadow:
+                0 3px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .registration {
+            margin-top: 14px;
+
+            color: #8bdc4a;
+
+            font-size: clamp(19px, 2.5vw, 29px);
+            font-weight: 700;
+
+            letter-spacing: 7px;
+        }
+
+        .line {
+            width: 80px;
+            height: 3px;
+
+            margin: 30px auto;
+
+            background: #8bdc4a;
+        }
+
+        h2 {
+            margin-bottom: 13px;
+
+            font-size: clamp(18px, 2.2vw, 25px);
+            font-weight: 700;
+
+            letter-spacing: 4px;
+        }
+
+        .description {
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            color: rgba(255, 255, 255, 0.82);
+
+            font-size: clamp(15px, 1.7vw, 19px);
+            line-height: 1.6;
+        }
+
+        .domain {
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 24px;
+
+            z-index: 2;
+
+            color: rgba(255, 255, 255, 0.55);
+
+            text-align: center;
+
+            font-size: 12px;
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 600px) {
+
+            .hero {
+                background-position: 55% center;
+            }
+
+            .seven {
+                width: 60px;
+                height: 60px;
+
+                font-size: 34px;
+            }
+
+            h1 {
+                letter-spacing: 2px;
+            }
+
+            .registration {
+                letter-spacing: 5px;
+            }
+
+            .content {
+                padding-bottom: 90px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="hero">
+
+        <div class="content">
+
+            <div class="seven">7</div>
+
+            <h1>
+                Caterham<br>
+                Superlight
+            </h1>
+
+            <div class="registration">
+                C7 DFH
+            </div>
+
+            <div class="line"></div>
+
+            <h2>
+                FULL WEBSITE COMING SOON
+            </h2>
+
+            <p class="description">
+                The story, specification, build and track history
+                of Caterham Superlight C7 DFH.
+            </p>
+
+        </div>
+
+        <div class="domain">
+            caterhamsuperlight.co.uk
+        </div>
+
+    </main>
+
+</body>
+</html>
