@@ -7,1061 +7,876 @@
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     >
 
-    <meta name="theme-color" content="#080a0b">
+    <meta
+        name="theme-color"
+        content="#050705"
+    >
 
     <title>Caterham Superlight | C7 DFH</title>
 
     <meta
         name="description"
-        content="The documented history, specification and development of Caterham Superlight C7 DFH."
+        content="Caterham Superlight C7 DFH - history, specification, performance, photos and videos."
+    >
+
+    <link rel="icon" href="hero.jpg">
+
+    <link
+        rel="apple-touch-icon"
+        href="hero.jpg"
     >
 
 
-    <!-- =======================================================
-         SOCIAL / WHATSAPP / IMESSAGE SHARING
-    ======================================================== -->
-
-    <meta property="og:type" content="website">
-
-    <meta
-        property="og:url"
-        content="https://www.caterhamsuperlight.co.uk/"
-    >
-
-    <meta
-        property="og:title"
-        content="Caterham Superlight | C7 DFH"
-    >
-
-    <meta
-        property="og:description"
-        content="The documented history, specification and development of Caterham Superlight C7 DFH."
-    >
+<style>
 
-    <meta
-        property="og:image"
-        content="https://www.caterhamsuperlight.co.uk/hero.jpg"
-    >
-
-    <meta
-        property="og:image:secure_url"
-        content="https://www.caterhamsuperlight.co.uk/hero.jpg"
-    >
+/* =========================
+   BASE
+========================= */
 
-    <meta
-        property="og:image:type"
-        content="image/jpeg"
-    >
+* {
+    box-sizing: border-box;
+}
 
-    <meta name="twitter:card" content="summary_large_image">
+html {
+    scroll-behavior: smooth;
+}
 
-    <meta
-        name="twitter:title"
-        content="Caterham Superlight | C7 DFH"
-    >
+body {
 
-    <meta
-        name="twitter:description"
-        content="The documented history, specification and development of Caterham Superlight C7 DFH."
-    >
+    margin: 0;
 
-    <meta
-        name="twitter:image"
-        content="https://www.caterhamsuperlight.co.uk/hero.jpg"
-    >
+    background:
+        radial-gradient(
+            circle at top,
+            #152015 0%,
+            #080b08 35%,
+            #030403 100%
+        );
 
+    color: #eeeeee;
 
-    <style>
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
 
-        /* =====================================================
-           RESET
-        ====================================================== */
+    line-height: 1.6;
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+img {
+    max-width: 100%;
+    display: block;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+a {
+    color: inherit;
+}
 
-        body {
-            background: #080a0b;
-            color: #f5f5f5;
 
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Arial,
-                sans-serif;
+/* =========================
+   NAVIGATION
+========================= */
 
-            line-height: 1.6;
-        }
+nav {
 
-        img {
-            display: block;
-            max-width: 100%;
-        }
+    position: sticky;
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+    top: 0;
 
+    z-index: 1000;
 
-        /* =====================================================
-           VARIABLES
-        ====================================================== */
+    background:
+        rgba(3, 5, 3, 0.94);
 
-        :root {
-            --green: #8edb52;
-            --green-soft: #a4e46e;
+    backdrop-filter:
+        blur(12px);
 
-            --black: #080a0b;
-            --dark: #0d1012;
-            --panel: #121619;
-            --panel-light: #181d20;
+    -webkit-backdrop-filter:
+        blur(12px);
 
-            --text: #f5f5f5;
-            --muted: #aeb5b9;
-            --line: rgba(255,255,255,0.10);
+    border-bottom:
+        1px solid rgba(123, 255, 62, 0.2);
+}
 
-            --max-width: 1180px;
-        }
+.nav-inner {
 
+    max-width: 1200px;
 
-        /* =====================================================
-           NAVIGATION
-        ====================================================== */
+    margin: auto;
 
-        .topbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+    padding:
+        15px
+        22px;
 
-            z-index: 100;
+    display: flex;
 
-            background: rgba(8,10,11,0.84);
+    align-items: center;
 
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+    justify-content: space-between;
 
-            border-bottom: 1px solid var(--line);
-        }
+    gap: 20px;
+}
 
-        .nav {
-            width: min(94%, var(--max-width));
-            margin: auto;
+.logo {
 
-            min-height: 64px;
+    font-weight: 900;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    letter-spacing: 2px;
 
-            gap: 20px;
-        }
+    white-space: nowrap;
+}
 
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 11px;
+.logo span {
+    color: #7cff3e;
+}
 
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+.nav-links {
 
-        .nav-seven {
-            width: 34px;
-            height: 34px;
+    display: flex;
 
-            display: grid;
-            place-items: center;
+    flex-wrap: wrap;
 
-            border: 2px solid var(--green);
-            border-radius: 50%;
+    justify-content: flex-end;
 
-            color: var(--green);
+    gap: 18px;
+}
 
-            font-size: 18px;
-            font-weight: 900;
-        }
+.nav-links a {
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
+    text-decoration: none;
 
-        .nav-links a {
-            color: #d6dadd;
+    color: #cccccc;
 
-            font-size: 12px;
-            font-weight: 700;
+    font-size: 13px;
 
-            letter-spacing: 1.4px;
-            text-transform: uppercase;
+    font-weight: 700;
 
-            transition: color .2s ease;
-        }
+    letter-spacing: 1px;
+}
 
-        .nav-links a:hover {
-            color: var(--green);
-        }
+.nav-links a:hover {
+    color: #7cff3e;
+}
 
 
-        /* =====================================================
-           HERO
-        ====================================================== */
+/* =========================
+   HERO
+========================= */
 
-        .hero {
-            position: relative;
+.hero {
 
-            min-height: 100vh;
+    position: relative;
 
-            display: flex;
-            align-items: flex-end;
+    min-height: 82vh;
 
-            overflow: hidden;
+    display: flex;
 
-            background-image:
-                linear-gradient(
-                    to bottom,
-                    rgba(0,0,0,0.08) 5%,
-                    rgba(0,0,0,0.20) 45%,
-                    rgba(0,0,0,0.86) 100%
-                ),
-                url("hero.jpg");
+    align-items: flex-end;
 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+    overflow: hidden;
 
-        .hero-inner {
-            position: relative;
-            z-index: 2;
+    background:
+        #000
+        url("hero.jpg")
+        center center / cover
+        no-repeat;
+}
 
-            width: min(92%, var(--max-width));
-            margin: 0 auto;
+.hero::before {
 
-            padding:
-                150px 0
-                80px;
-        }
+    content: "";
 
-        .hero-kicker {
-            color: var(--green);
+    position: absolute;
 
-            font-size: 14px;
-            font-weight: 800;
+    inset: 0;
 
-            letter-spacing: 4px;
-            text-transform: uppercase;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.08) 25%,
+            rgba(0,0,0,0.45) 60%,
+            rgba(0,0,0,0.96) 100%
+        );
+}
 
-            margin-bottom: 14px;
-        }
+.hero-content {
 
-        .hero h1 {
-            max-width: 850px;
+    position: relative;
 
-            font-size: clamp(55px, 9vw, 112px);
-            line-height: .88;
+    z-index: 2;
 
-            letter-spacing: -3px;
-            text-transform: uppercase;
+    width: 100%;
 
-            text-shadow: 0 5px 30px rgba(0,0,0,.65);
-        }
+    max-width: 1200px;
 
-        .hero-reg {
-            margin-top: 17px;
+    margin: auto;
 
-            color: var(--green);
+    padding:
+        80px
+        25px
+        60px;
+}
 
-            font-size: clamp(22px, 3vw, 34px);
-            font-weight: 800;
+.hero-kicker {
 
-            letter-spacing: 8px;
-        }
+    color: #7cff3e;
 
-        .hero-copy {
-            max-width: 740px;
+    font-size: 14px;
 
-            margin-top: 24px;
+    font-weight: 800;
 
-            color: rgba(255,255,255,.82);
+    text-transform: uppercase;
 
-            font-size: clamp(16px, 2vw, 20px);
-        }
+    letter-spacing: 3px;
+}
 
-        .hero-meta {
-            margin-top: 34px;
+.hero h1 {
 
-            display: flex;
-            flex-wrap: wrap;
-            gap: 9px;
-        }
+    margin:
+        5px
+        0
+        0;
 
-        .hero-pill {
-            padding: 8px 13px;
+    font-size:
+        clamp(
+            48px,
+            9vw,
+            110px
+        );
 
-            border: 1px solid rgba(255,255,255,.18);
-            border-radius: 999px;
+    line-height: 0.95;
 
-            background: rgba(0,0,0,.30);
+    letter-spacing: -4px;
+}
 
-            backdrop-filter: blur(7px);
-            -webkit-backdrop-filter: blur(7px);
+.hero h2 {
 
-            font-size: 12px;
-            font-weight: 700;
+    margin:
+        15px
+        0
+        0;
 
-            letter-spacing: .7px;
+    font-size:
+        clamp(
+            22px,
+            4vw,
+            42px
+        );
 
-            text-transform: uppercase;
-        }
+    color: #d9d9d9;
 
+    font-weight: 500;
+}
 
-        /* =====================================================
-           COMMON LAYOUT
-        ====================================================== */
+.reg {
 
-        section {
-            padding: 90px 0;
-        }
+    display: inline-block;
 
-        .container {
-            width: min(92%, var(--max-width));
-            margin: auto;
-        }
+    margin-top: 24px;
 
-        .section-kicker {
-            color: var(--green);
+    padding:
+        8px
+        15px;
 
-            font-size: 12px;
-            font-weight: 800;
+    background: #f5f5f2;
 
-            letter-spacing: 3px;
-            text-transform: uppercase;
+    color: #111;
 
-            margin-bottom: 10px;
-        }
+    border-radius: 5px;
 
-        .section-title {
-            font-size: clamp(35px, 5vw, 62px);
+    font-weight: 900;
 
-            line-height: 1;
+    letter-spacing: 4px;
 
-            letter-spacing: -1.5px;
+    font-size: 19px;
 
-            margin-bottom: 22px;
-        }
+    box-shadow:
+        0 4px 18px rgba(0,0,0,0.5);
+}
 
-        .section-intro {
-            max-width: 820px;
 
-            color: var(--muted);
+/* =========================
+   SECTIONS
+========================= */
 
-            font-size: 18px;
-            line-height: 1.75;
-        }
+section {
 
-        .green {
-            color: var(--green);
-        }
+    max-width: 1200px;
 
+    margin: auto;
 
-        /* =====================================================
-           INTRO / STORY
-        ====================================================== */
+    padding:
+        75px
+        24px;
+}
 
-        .story {
-            background: var(--dark);
-        }
+.section-title {
 
-        .story-grid {
-            display: grid;
+    margin-bottom: 35px;
+}
 
-            grid-template-columns:
-                minmax(0, 1.2fr)
-                minmax(300px, .8fr);
+.section-label {
 
-            gap: 60px;
+    color: #7cff3e;
 
-            align-items: start;
-        }
+    text-transform: uppercase;
 
-        .story-text p {
-            color: #c8cdd0;
+    letter-spacing: 3px;
 
-            font-size: 17px;
+    font-size: 12px;
 
-            margin-top: 18px;
-        }
+    font-weight: 800;
+}
 
-        .story-card {
-            padding: 30px;
+.section-title h2 {
 
-            background: var(--panel);
+    margin:
+        3px
+        0
+        0;
 
-            border: 1px solid var(--line);
-            border-radius: 16px;
-        }
+    font-size:
+        clamp(
+            32px,
+            6vw,
+            56px
+        );
 
-        .story-card-label {
-            color: var(--green);
+    letter-spacing: -2px;
+}
 
-            font-size: 11px;
-            font-weight: 800;
+.section-title p {
 
-            letter-spacing: 2.4px;
-            text-transform: uppercase;
-        }
+    max-width: 750px;
 
-        .story-card-date {
-            margin-top: 7px;
+    color: #a9aaa9;
 
-            font-size: 34px;
-            font-weight: 800;
+    margin-top: 10px;
+}
 
-            line-height: 1.1;
-        }
 
-        .story-card p {
-            margin-top: 15px;
+/* =========================
+   INTRO
+========================= */
 
-            color: var(--muted);
-        }
+.intro-grid {
 
+    display: grid;
 
-        /* =====================================================
-           HEADLINE NUMBERS
-        ====================================================== */
+    grid-template-columns:
+        1.2fr
+        0.8fr;
 
-        .numbers {
-            padding: 0;
+    gap: 35px;
 
-            background: var(--dark);
-        }
+    align-items: start;
+}
 
-        .numbers-grid {
-            width: min(92%, var(--max-width));
-            margin: auto;
+.story {
 
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+    color: #c7c7c7;
 
-            border-top: 1px solid var(--line);
-            border-bottom: 1px solid var(--line);
-        }
+    font-size: 18px;
+}
 
-        .number-card {
-            padding: 45px 25px;
+.story strong {
+    color: white;
+}
 
-            text-align: center;
+.highlight-card {
 
-            border-right: 1px solid var(--line);
-        }
+    background:
+        linear-gradient(
+            145deg,
+            #111711,
+            #080a08
+        );
 
-        .number-card:last-child {
-            border-right: 0;
-        }
+    border:
+        1px solid rgba(124,255,62,0.2);
 
-        .number {
-            color: var(--green);
+    border-radius: 18px;
 
-            font-size: clamp(38px, 5vw, 61px);
-            font-weight: 900;
+    padding: 28px;
+}
 
-            line-height: 1;
-        }
+.highlight {
 
-        .number-label {
-            margin-top: 10px;
+    display: flex;
 
-            color: var(--muted);
+    justify-content: space-between;
 
-            font-size: 12px;
-            font-weight: 700;
+    gap: 20px;
 
-            letter-spacing: 1.7px;
-            text-transform: uppercase;
-        }
+    padding:
+        14px
+        0;
 
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+}
 
-        /* =====================================================
-           SPECIFICATION
-        ====================================================== */
+.highlight:last-child {
+    border-bottom: 0;
+}
 
-        .spec {
-            background: #090c0d;
-        }
+.highlight span {
 
-        .spec-grid {
-            margin-top: 45px;
+    color: #8c8f8c;
+}
 
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+.highlight strong {
 
-            gap: 20px;
-        }
+    color: #fff;
 
-        .spec-card {
-            background: var(--panel);
+    text-align: right;
+}
 
-            border: 1px solid var(--line);
-            border-radius: 16px;
 
-            padding: 28px;
-        }
+/* =========================
+   SPECIFICATION
+========================= */
 
-        .spec-card h3 {
-            color: var(--green);
+.spec-grid {
 
-            font-size: 17px;
+    display: grid;
 
-            letter-spacing: 1px;
-            text-transform: uppercase;
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
 
-            margin-bottom: 18px;
-        }
+    gap: 20px;
+}
 
-        .spec-list {
-            list-style: none;
-        }
+.spec-card {
 
-        .spec-list li {
-            position: relative;
+    background: #0a0d0a;
 
-            padding:
-                8px 0
-                8px 19px;
+    border:
+        1px solid
+        rgba(255,255,255,0.09);
 
-            color: #d0d5d8;
+    border-radius: 16px;
 
-            border-bottom: 1px solid rgba(255,255,255,.055);
-        }
+    padding: 26px;
+}
 
-        .spec-list li:last-child {
-            border-bottom: 0;
-        }
+.spec-card h3 {
 
-        .spec-list li::before {
-            content: "";
+    color: #7cff3e;
 
-            position: absolute;
+    margin:
+        0
+        0
+        18px;
 
-            left: 0;
-            top: 18px;
+    font-size: 19px;
 
-            width: 6px;
-            height: 6px;
+    letter-spacing: 1px;
+}
 
-            background: var(--green);
-            border-radius: 50%;
-        }
+.spec-card ul {
 
+    margin: 0;
 
-        /* =====================================================
-           ENGINE FEATURE
-        ====================================================== */
+    padding-left: 20px;
 
-        .engine {
-            background: var(--panel);
-        }
+    color: #c7c7c7;
+}
 
-        .feature-grid {
-            display: grid;
+.spec-card li {
 
-            grid-template-columns:
-                minmax(0, 1fr)
-                minmax(330px, .8fr);
+    margin-bottom: 10px;
+}
 
-            gap: 50px;
 
-            align-items: center;
-        }
+/* =========================
+   PERFORMANCE
+========================= */
 
-        .feature-copy p {
-            color: #c6cbce;
-            margin-top: 18px;
-            font-size: 17px;
-        }
+.performance-grid {
 
-        .feature-box {
-            padding: 35px;
+    display: grid;
 
-            border: 1px solid rgba(142,219,82,.30);
-            border-radius: 18px;
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0,1fr)
+        );
 
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(142,219,82,.07),
-                    rgba(255,255,255,.015)
-                );
-        }
+    gap: 15px;
+}
 
-        .feature-box strong {
-            display: block;
+.performance-card {
 
-            color: var(--green);
+    background:
+        linear-gradient(
+            145deg,
+            #121812,
+            #080a08
+        );
 
-            font-size: clamp(38px, 6vw, 66px);
+    border:
+        1px solid rgba(124,255,62,.2);
 
-            line-height: 1;
-        }
+    border-radius: 16px;
 
-        .feature-box span {
-            display: block;
+    padding: 24px;
 
-            margin-top: 9px;
+    text-align: center;
+}
 
-            color: var(--muted);
+.performance-card strong {
 
-            font-size: 12px;
-            font-weight: 700;
+    display: block;
 
-            letter-spacing: 1.7px;
-            text-transform: uppercase;
-        }
+    color: #7cff3e;
 
-        .feature-box p {
-            margin-top: 25px;
+    font-size:
+        clamp(
+            28px,
+            5vw,
+            44px
+        );
 
-            color: #bec5c8;
-        }
+    line-height: 1.1;
+}
 
+.performance-card span {
 
-        /* =====================================================
-           TIMELINE
-        ====================================================== */
+    display: block;
 
-        .history {
-            background: #090c0d;
-        }
+    margin-top: 8px;
 
-        .timeline {
-            margin-top: 50px;
+    color: #a7a8a7;
 
-            position: relative;
-        }
+    font-size: 13px;
 
-        .timeline::before {
-            content: "";
+    text-transform: uppercase;
 
-            position: absolute;
+    letter-spacing: 1px;
+}
 
-            left: 91px;
-            top: 5px;
-            bottom: 5px;
+.dyno-note {
 
-            width: 1px;
+    margin-top: 25px;
 
-            background: rgba(142,219,82,.28);
-        }
+    color: #a6a7a6;
 
-        .timeline-item {
-            position: relative;
+    font-size: 14px;
+}
 
-            display: grid;
 
-            grid-template-columns:
-                70px
-                1fr;
+/* =========================
+   VIDEO
+========================= */
 
-            gap: 45px;
+.video-grid {
 
-            padding-bottom: 34px;
-        }
+    display: grid;
 
-        .timeline-year {
-            color: var(--green);
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0,1fr)
+        );
 
-            font-size: 18px;
-            font-weight: 900;
-        }
+    gap: 20px;
+}
 
-        .timeline-content {
-            padding: 0 0 30px 0;
+.video {
 
-            border-bottom: 1px solid var(--line);
-        }
+    border-radius: 16px;
 
-        .timeline-content::before {
-            content: "";
+    overflow: hidden;
 
-            position: absolute;
+    background: #000;
 
-            left: 86px;
-            top: 5px;
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+}
 
-            width: 11px;
-            height: 11px;
+.video iframe {
 
-            background: var(--green);
+    display: block;
 
-            border-radius: 50%;
+    width: 100%;
 
-            box-shadow:
-                0 0 0 5px rgba(142,219,82,.12);
-        }
+    aspect-ratio: 16 / 9;
 
-        .timeline-content h3 {
-            font-size: 18px;
+    border: 0;
+}
 
-            margin-bottom: 8px;
-        }
 
-        .timeline-content p {
-            color: var(--muted);
-        }
+/* =========================
+   GALLERY
+========================= */
 
+.gallery {
 
-        /* =====================================================
-           CHASSIS SETUP
-        ====================================================== */
+    display: grid;
 
-        .setup {
-            background: var(--panel);
-        }
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0,1fr)
+        );
 
-        .setup-grid {
-            margin-top: 42px;
+    gap: 15px;
+}
 
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+.gallery-item {
 
-            gap: 12px;
-        }
+    position: relative;
 
-        .setup-card {
-            padding: 22px 18px;
+    background: #0a0a0a;
 
-            background: #0c0f11;
+    border-radius: 13px;
 
-            border: 1px solid var(--line);
-            border-radius: 13px;
-        }
+    overflow: hidden;
 
-        .setup-value {
-            color: var(--green);
+    cursor: pointer;
 
-            font-size: 27px;
-            font-weight: 850;
-        }
+    min-height: 220px;
 
-        .setup-label {
-            margin-top: 5px;
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+}
 
-            color: var(--muted);
+.gallery-item img {
 
-            font-size: 11px;
-            font-weight: 700;
+    width: 100%;
 
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
+    height: 100%;
 
+    min-height: 220px;
 
-        /* =====================================================
-           GALLERY
-        ====================================================== */
+    object-fit: cover;
 
-        .gallery-section {
-            background: #080a0b;
-        }
+    transition:
+        transform .35s ease,
+        opacity .35s ease;
+}
 
-        .gallery-status {
-            margin-top: 30px;
+.gallery-item:hover img {
 
-            color: var(--muted);
-        }
+    transform: scale(1.035);
 
-        .gallery {
-            margin-top: 35px;
+    opacity: .9;
+}
 
-            display: grid;
+.gallery-loading {
 
-            grid-template-columns:
-                repeat(3, minmax(0, 1fr));
+    color: #888;
 
-            gap: 12px;
-        }
+    grid-column:
+        1 / -1;
 
-        .gallery-item {
-            position: relative;
+    padding: 30px 0;
 
-            aspect-ratio: 4 / 3;
+    text-align: center;
+}
 
-            overflow: hidden;
 
-            border-radius: 11px;
+/* =========================
+   LIGHTBOX
+========================= */
 
-            background: var(--panel);
+.lightbox {
 
-            cursor: pointer;
-        }
+    display: none;
 
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
+    position: fixed;
 
-            object-fit: cover;
+    inset: 0;
 
-            transition:
-                transform .35s ease,
-                filter .35s ease;
-        }
+    z-index: 5000;
 
-        .gallery-item:hover img {
-            transform: scale(1.035);
-            filter: brightness(1.06);
-        }
+    background:
+        rgba(0,0,0,.96);
 
+    padding: 25px;
 
-        /* =====================================================
-           LIGHTBOX
-        ====================================================== */
+    align-items: center;
 
-        .lightbox {
-            position: fixed;
+    justify-content: center;
+}
 
-            inset: 0;
+.lightbox.active {
+    display: flex;
+}
 
-            z-index: 9999;
+.lightbox img {
 
-            display: none;
+    max-width: 96vw;
 
-            align-items: center;
-            justify-content: center;
+    max-height: 92vh;
 
-            background: rgba(0,0,0,.94);
+    object-fit: contain;
 
-            padding: 20px;
-        }
+    border-radius: 7px;
+}
 
-        .lightbox.open {
-            display: flex;
-        }
+.lightbox-close {
 
-        .lightbox img {
-            max-width: 94vw;
-            max-height: 88vh;
+    position: fixed;
 
-            object-fit: contain;
-        }
+    top: 18px;
 
-        .lightbox-close {
-            position: absolute;
+    right: 25px;
 
-            top: 20px;
-            right: 25px;
+    z-index: 5001;
 
-            border: 0;
+    color: white;
 
-            background: transparent;
+    font-size: 40px;
 
-            color: white;
+    cursor: pointer;
 
-            font-size: 38px;
+    line-height: 1;
+}
 
-            cursor: pointer;
-        }
 
-        .lightbox-prev,
-        .lightbox-next {
-            position: absolute;
+/* =========================
+   FOOTER
+========================= */
 
-            top: 50%;
+footer {
 
-            transform: translateY(-50%);
+    border-top:
+        1px solid
+        rgba(255,255,255,0.08);
 
-            width: 48px;
-            height: 62px;
+    color: #777;
 
-            border: 0;
-            border-radius: 9px;
+    text-align: center;
 
-            background: rgba(0,0,0,.45);
+    padding:
+        40px
+        20px
+        60px;
 
-            color: white;
+    font-size: 13px;
+}
 
-            font-size: 35px;
+footer strong {
+    color: #bdbdbd;
+}
 
-            cursor: pointer;
-        }
 
-        .lightbox-prev {
-            left: 12px;
-        }
+/* =========================
+   MOBILE
+========================= */
 
-        .lightbox-next {
-            right: 12px;
-        }
+@media (max-width: 850px) {
 
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
 
-        /* =====================================================
-           FOOTER
-        ====================================================== */
+    .performance-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
 
-        footer {
-            padding: 55px 0;
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
 
-            background: #050607;
+    .gallery {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
 
-            border-top: 1px solid var(--line);
+    .spec-grid {
+        grid-template-columns: 1fr;
+    }
 
-            text-align: center;
-        }
+    .hero {
+        min-height: 72vh;
+    }
 
-        .footer-seven {
-            width: 48px;
-            height: 48px;
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+}
 
-            margin: 0 auto 15px;
 
-            display: grid;
-            place-items: center;
+@media (max-width: 600px) {
 
-            border: 2px solid var(--green);
-            border-radius: 50%;
+    .nav-inner {
 
-            color: var(--green);
+        flex-direction: column;
 
-            font-size: 25px;
-            font-weight: 900;
-        }
+        align-items: flex-start;
 
-        .footer-title {
-            font-weight: 800;
+        gap: 9px;
 
-            letter-spacing: 2px;
+        padding:
+            11px
+            16px;
+    }
 
-            text-transform: uppercase;
-        }
+    .nav-links {
 
-        .footer-domain {
-            margin-top: 8px;
+        width: 100%;
 
-            color: var(--muted);
+        overflow-x: auto;
 
-            font-size: 12px;
+        flex-wrap: nowrap;
 
-            letter-spacing: 1px;
-        }
+        justify-content: flex-start;
 
+        padding-bottom: 3px;
+    }
 
-        /* =====================================================
-           MOBILE
-        ====================================================== */
+    .nav-links a {
 
-        @media (max-width: 900px) {
+        white-space: nowrap;
 
-            .nav-links {
-                display: none;
-            }
+        font-size: 11px;
+    }
 
-            .hero {
-                min-height: 92vh;
-                background-position: 56% center;
-            }
+    section {
 
-            .story-grid,
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
+        padding:
+            55px
+            16px;
+    }
 
-            .spec-grid {
-                grid-template-columns: 1fr;
-            }
+    .hero-content {
 
-            .setup-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
+        padding:
+            60px
+            18px
+            38px;
+    }
 
-            .gallery {
-                grid-template-columns:
-                    repeat(2, minmax(0, 1fr));
-            }
+    .gallery {
 
-        }
+        grid-template-columns: 1fr;
 
+        gap: 11px;
+    }
 
-        @media (max-width: 600px) {
+    .gallery-item,
+    .gallery-item img {
 
-            section {
-                padding: 68px 0;
-            }
+        min-height: 250px;
+    }
 
-            .hero-inner {
-                padding-bottom: 55px;
-            }
+}
 
-            .hero h1 {
-                letter-spacing: -2px;
-            }
-
-            .hero-reg {
-                letter-spacing: 5px;
-            }
-
-            .numbers-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .number-card {
-                border-right: 0;
-                border-bottom: 1px solid var(--line);
-            }
-
-            .number-card:last-child {
-                border-bottom: 0;
-            }
-
-            .timeline::before {
-                left: 68px;
-            }
-
-            .timeline-item {
-                grid-template-columns:
-                    52px
-                    1fr;
-
-                gap: 33px;
-            }
-
-            .timeline-content::before {
-                left: 63px;
-            }
-
-            .setup-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .gallery {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .gallery-item {
-                aspect-ratio: 16 / 10;
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
@@ -1069,812 +884,192 @@
 <body>
 
 
-<!-- =========================================================
+<!-- =========================
      NAVIGATION
-========================================================== -->
+========================= -->
 
-<header class="topbar">
+<nav>
 
-    <nav class="nav">
+    <div class="nav-inner">
 
-        <a
-            class="nav-logo"
-            href="#top"
-        >
-
-            <span class="nav-seven">
-                7
-            </span>
-
-            <span>
-                C7 DFH
-            </span>
-
-        </a>
-
+        <div class="logo">
+            CATERHAM <span>SUPERLIGHT</span>
+        </div>
 
         <div class="nav-links">
 
-            <a href="#story">
-                The Car
+            <a href="#car">
+                THE CAR
             </a>
 
             <a href="#specification">
-                Specification
+                SPEC
             </a>
 
-            <a href="#history">
-                History
+            <a href="#performance">
+                PERFORMANCE
+            </a>
+
+            <a href="#videos">
+                VIDEOS
             </a>
 
             <a href="#gallery">
-                Gallery
+                GALLERY
             </a>
 
         </div>
 
-    </nav>
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-kicker">
+            Caterham Seven
+        </div>
+
+        <h1>
+            SUPERLIGHT
+        </h1>
+
+        <h2>
+            Lightweight. Raw. Unfiltered.
+        </h2>
+
+        <div class="reg">
+            C7 DFH
+        </div>
+
+    </div>
 
 </header>
 
 
 
-<!-- =========================================================
-     HERO
-========================================================== -->
+<!-- =========================
+     THE CAR
+========================= -->
 
-<main
-    id="top"
-    class="hero"
->
+<section id="car">
 
-    <div class="hero-inner">
+    <div class="section-title">
 
-        <div class="hero-kicker">
-            Caterham Superlight
+        <div class="section-label">
+            The Car
         </div>
 
-        <h1>
-            Lightweight.<br>
-            Focused.<br>
-            Developed.
-        </h1>
-
-        <div class="hero-reg">
+        <h2>
             C7 DFH
-        </div>
-
-        <p class="hero-copy">
-
-            A long-term owned Caterham Superlight,
-            progressively developed with a Dave Andrews-built
-            K-Series engine, Caterham 6-speed transmission,
-            dry-sump lubrication, R500 suspension components
-            and an extensive documented history.
-
-        </p>
-
-
-        <div class="hero-meta">
-
-            <span class="hero-pill">
-                Purchased 01.02.2001
-            </span>
-
-            <span class="hero-pill">
-                1.8 VVC
-            </span>
-
-            <span class="hero-pill">
-                6-Speed
-            </span>
-
-            <span class="hero-pill">
-                Limited Slip Differential
-            </span>
-
-            <span class="hero-pill">
-                Verde Ithaca
-            </span>
-
-        </div>
-
-    </div>
-
-</main>
-
-
-
-<!-- =========================================================
-     STORY
-========================================================== -->
-
-<section
-    id="story"
-    class="story"
->
-
-    <div class="container">
-
-        <div class="story-grid">
-
-            <div class="story-text">
-
-                <div class="section-kicker">
-                    The Car
-                </div>
-
-                <h2 class="section-title">
-                    More than two decades of development.
-                </h2>
-
-                <p>
-
-                    C7 DFH is a Caterham Superlight purchased
-                    on 1 February 2001 and developed progressively
-                    over the years into a highly individual,
-                    track-focused Seven.
-
-                </p>
-
-                <p>
-
-                    At its heart is a Dave Andrews-built
-                    1.8-litre Rover K-Series VVC engine,
-                    featuring extensive internal, induction
-                    and lubrication upgrades.
-
-                </p>
-
-                <p>
-
-                    The chassis has received similar attention,
-                    with R500 and wide-track suspension components,
-                    specially valved Nitron dampers, uprated braking,
-                    staggered 13-inch wheels and a limited-slip
-                    differential.
-
-                </p>
-
-                <p>
-
-                    Finished in Lamborghini
-                    <strong class="green">
-                        Verde Ithaca
-                    </strong>,
-                    exposed carbon fibre provides the contrast
-                    across the nose, front wings and rear wings.
-
-                </p>
-
-            </div>
-
-
-            <aside class="story-card">
-
-                <div class="story-card-label">
-                    Ownership
-                </div>
-
-                <div class="story-card-date">
-                    Since<br>
-                    1 February 2001
-                </div>
-
-                <p>
-
-                    A long-term owned car with a substantial
-                    history file documenting its continued
-                    maintenance and development.
-
-                </p>
-
-            </aside>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     HEADLINE FIGURES
-========================================================== -->
-
-<section class="numbers">
-
-    <div class="numbers-grid">
-
-        <div class="number-card">
-
-            <div class="number">
-                214.8
-            </div>
-
-            <div class="number-label">
-                BHP corrected engine power
-            </div>
-
-        </div>
-
-
-        <div class="number-card">
-
-            <div class="number">
-                563.5
-            </div>
-
-            <div class="number-label">
-                KG measured without driver
-            </div>
-
-        </div>
-
-
-        <div class="number-card">
-
-            <div class="number">
-                7,910
-            </div>
-
-            <div class="number-label">
-                RPM recorded on dyno
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     SPECIFICATION
-========================================================== -->
-
-<section
-    id="specification"
-    class="spec"
->
-
-    <div class="container">
-
-        <div class="section-kicker">
-            Current Specification
-        </div>
-
-        <h2 class="section-title">
-            Built around the driver.
         </h2>
 
-        <p class="section-intro">
-
-            The specification below describes the developed
-            configuration of C7 DFH, combining Caterham,
-            R500 and specialist motorsport components.
-
-        </p>
-
-
-        <div class="spec-grid">
-
-
-            <!-- ENGINE -->
-
-            <article class="spec-card">
-
-                <h3>
-                    Engine
-                </h3>
-
-                <ul class="spec-list">
-
-                    <li>
-                        Rover K-Series 1.8 VVC
-                    </li>
-
-                    <li>
-                        Engine built by Dave Andrews
-                    </li>
-
-                    <li>
-                        Flowed cylinder head
-                    </li>
-
-                    <li>
-                        Larger inlet and exhaust valves
-                    </li>
-
-                    <li>
-                        Forged pistons
-                    </li>
-
-                    <li>
-                        Steel connecting rods
-                    </li>
-
-                    <li>
-                        Piper 1144 camshafts
-                    </li>
-
-                    <li>
-                        Piper vernier pulleys
-                    </li>
-
-                    <li>
-                        Flowed water pump
-                    </li>
-
-                    <li>
-                        Caterham R500 flywheel
-                    </li>
-
-                    <li>
-                        Magnecor 8.5 mm ignition leads
-                    </li>
-
-                    <li>
-                        Bosch 36 lb/hr fuel injectors
-                    </li>
-
-                </ul>
-
-            </article>
-
-
-
-            <!-- INDUCTION / COOLING -->
-
-            <article class="spec-card">
-
-                <h3>
-                    Induction & Cooling
-                </h3>
-
-                <ul class="spec-list">
-
-                    <li>
-                        Caterham roller-barrel throttle bodies
-                    </li>
-
-                    <li>
-                        Caterham carbon-fibre airbox
-                    </li>
-
-                    <li>
-                        Radtec aluminium radiator
-                    </li>
-
-                    <li>
-                        SPAL electric cooling fan
-                    </li>
-
-                    <li>
-                        Laminova oil cooler documented
-                    </li>
-
-                </ul>
-
-            </article>
-
-
-
-            <!-- LUBRICATION -->
-
-            <article class="spec-card">
-
-                <h3>
-                    Lubrication
-                </h3>
-
-                <ul class="spec-list">
-
-                    <li>
-                        Caterham dry-sump lubrication system
-                    </li>
-
-                    <li>
-                        Titan Gold dry-sump pump
-                    </li>
-
-                    <li>
-                        Caterham dry-sump pan
-                    </li>
-
-                    <li>
-                        Dry-sump baffle and scavenge system
-                    </li>
-
-                    <li>
-                        Associated Caterham filter,
-                        pickup and oil supply components
-                    </li>
-
-                </ul>
-
-            </article>
-
-
-
-            <!-- TRANSMISSION -->
-
-            <article class="spec-card">
-
-                <h3>
-                    Transmission & Drivetrain
-                </h3>
-
-                <ul class="spec-list">
-
-                    <li>
-                        Caterham 6-speed gearbox
-                    </li>
-
-                    <li>
-                        3.62:1 Ford Sierra-type final drive
-                    </li>
-
-                    <li>
-                        Limited-slip differential
-                    </li>
-
-                </ul>
-
-            </article>
-
-
-
-            <!-- EXHAUST -->
-
-            <article class="spec-card">
-
-                <h3>
-                    Exhaust
-                </h3>
-
-                <ul class="spec-list">
-
-                    <li>
-                        Powerspeed exhaust system
-                    </li>
-
-                    <li>
-                        4-into-2 manifold
-                    </li>
-
-                    <li>
-                        Large-bore 4-into-1 system
-                    </li>
-
-                    <li>
-                        7-inch stainless-steel
-                        repackable silencer
-                    </li>
-
-                </ul>
-
-            </article>
-
-
-
-            <!-- SUSPENSION -->
-
-            <article class="spec-card">
-
-                <h3>
-                    Chassis & Suspension
-                </h3>
-
-                <ul class="spec-list">
-
-                    <li>
-                        Wide-track front suspension
-                    </li>
-
-                    <li>
-                        R500 upper and lower front wishbones
-                    </li>
-
-                    <li>
-                        Aero-section front wishbones
-                    </li>
-
-                    <li>
-                        Nitron NTR1 dampers
-                    </li>
-
-                    <li>
-                        Nitron dampers specially valved by A.R.O.K.
-                    </li>
-
-                    <li>
-                        De Dion rear suspension
-                    </li>
-
-                    <li>
-                        Adjustable rear anti-roll bar
-                    </li>
-
-                    <li>
-                        DPR De Dion geometry shims
-                    </li>
-
-                    <li>
-                        Caterham anti-roll-bar drop links
-                    </li>
-
-                </ul>
-
-            </article>
-
-
-
-            <!-- BRAKES -->
-
-            <article class="spec-card">
-
-                <h3>
-                    Brakes
-                </h3>
-
-                <ul class="spec-list">
-
-                    <li>
-                        Uprated Caterham race brake master cylinder
-                    </li>
-
-                    <li>
-                        4-pot front brake calipers
-                    </li>
-
-                    <li>
-                        Vented front discs
-                    </li>
-
-                    <li>
-                        Upgraded rear brake hoses and lines
-                    </li>
-
-                </ul>
-
-            </article>
-
-
-
-            <!-- WHEELS -->
-
-            <article class="spec-card">
-
-                <h3>
-                    Wheels & Tyres
-                </h3>
-
-                <ul class="spec-list">
-
-                    <li>
-                        Rial 13-inch alloy wheels
-                    </li>
-
-                    <li>
-                        Staggered front and rear sizes
-                    </li>
-
-                    <li>
-                        Avon ZZS 185/55 R13 front
-                    </li>
-
-                    <li>
-                        Avon ZZS 215/55 R13 rear
-                    </li>
-
-                </ul>
-
-            </article>
-
-
-
-            <!-- EXTERIOR -->
-
-            <article class="spec-card">
-
-                <h3>
-                    Exterior
-                </h3>
-
-                <ul class="spec-list">
-
-                    <li>
-                        Lamborghini Verde Ithaca paintwork
-                    </li>
-
-                    <li>
-                        Carbon-fibre nosecone with exposed carbon band
-                    </li>
-
-                    <li>
-                        Unpainted carbon-fibre front wings
-                    </li>
-
-                    <li>
-                        Unpainted carbon-fibre rear wings
-                    </li>
-
-                    <li>
-                        Carbon-fibre wing protectors
-                    </li>
-
-                    <li>
-                        Carbon-fibre front indicator shrouds
-                    </li>
-
-                    <li>
-                        Clear front and rear indicator lenses
-                    </li>
-
-                    <li>
-                        Body-colour "7" radiator grille
-                    </li>
-
-                    <li>
-                        Black Pack heated windscreen
-                    </li>
-
-                    <li>
-                        Aeroscreen retaining channels and brackets
-                    </li>
-
-                    <li>
-                        Driver and passenger door mirrors
-                    </li>
-
-                    <li>
-                        Trackday rollover bar with
-                        diagonal bracing
-                    </li>
-
-                    <li>
-                        Half hood
-                    </li>
-
-                </ul>
-
-            </article>
-
-
-
-            <!-- INTERIOR -->
-
-            <article class="spec-card">
-
-                <h3>
-                    Interior
-                </h3>
-
-                <ul class="spec-list">
-
-                    <li>
-                        Tillett carbon/Kevlar seats
-                    </li>
-
-                    <li>
-                        Carbon-fibre dashboard
-                    </li>
-
-                    <li>
-                        Push-button start
-                    </li>
-
-                    <li>
-                        Caterham / ACES SureShift 2 shift lights
-                    </li>
-
-                    <li>
-                        Carbon-fibre sill protectors
-                    </li>
-
-                    <li>
-                        Caterham / Luke 4-point harnesses
-                    </li>
-
-                    <li>
-                        Alloy knee panels
-                    </li>
-
-                    <li>
-                        Detachable quick-release Momo steering wheel
-                    </li>
-
-                    <li>
-                        Leather steering-wheel pad
-                    </li>
-
-                    <li>
-                        Carbon-effect leather transmission-tunnel cover
-                    </li>
-
-                    <li>
-                        Heater
-                    </li>
-
-                </ul>
-
-            </article>
+    </div>
+
+
+    <div class="intro-grid">
+
+        <div class="story">
+
+            <p>
+                A Caterham Superlight built around the idea
+                that less really is more.
+            </p>
+
+            <p>
+                Lightweight construction, a six-speed gearbox,
+                limited-slip differential, dry-sump lubrication
+                and uprated suspension and braking make this a
+                Caterham focused firmly on the driving experience.
+            </p>
+
+            <p>
+                The car has evolved through its life, including
+                its earlier <strong>yellow bodywork</strong> before
+                appearing in its distinctive green and exposed
+                carbon-fibre specification.
+            </p>
+
+            <p>
+                This site documents the car, its specification,
+                rolling-road sessions, road trips, track days,
+                photographs and video.
+            </p>
 
         </div>
 
-    </div>
 
-</section>
+        <div class="highlight-card">
 
-
-
-<!-- =========================================================
-     ENGINE FEATURE
-========================================================== -->
-
-<section class="engine">
-
-    <div class="container">
-
-        <div class="feature-grid">
-
-            <div class="feature-copy">
-
-                <div class="section-kicker">
-                    Dave Andrews K-Series
-                </div>
-
-                <h2 class="section-title">
-                    The heart of C7 DFH.
-                </h2>
-
-                <p>
-
-                    The 1.8-litre VVC engine has been extensively
-                    developed rather than simply externally modified.
-
-                </p>
-
-                <p>
-
-                    A flowed cylinder head with larger valves,
-                    forged pistons, steel rods and Piper 1144 cams
-                    sits at the centre of the specification.
-
-                </p>
-
-                <p>
-
-                    Caterham roller barrels and a carbon airbox
-                    handle induction, while the dry-sump system,
-                    Titan Gold pump and R500 flywheel complement
-                    the engine's track-focused character.
-
-                </p>
-
-            </div>
-
-
-            <div class="feature-box">
-
-                <strong>
-                    214.8 BHP
-                </strong>
+            <div class="highlight">
 
                 <span>
-                    Emerald rolling road · 17 March 2017
+                    Registration
                 </span>
 
-                <p>
+                <strong>
+                    C7 DFH
+                </strong>
 
-                    Corrected engine power was recorded at
-                    214.8 bhp, with 173.6 bhp measured at the
-                    wheels and 196.7 Nm maximum torque.
+            </div>
 
-                </p>
+
+            <div class="highlight">
+
+                <span>
+                    Transmission
+                </span>
+
+                <strong>
+                    Caterham 6-speed
+                </strong>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <span>
+                    Final Drive
+                </span>
+
+                <strong>
+                    3.62 LSD
+                </strong>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <span>
+                    Corrected Power
+                </span>
+
+                <strong>
+                    214.8 bhp
+                </strong>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <span>
+                    Character
+                </span>
+
+                <strong>
+                    Superlight
+                </strong>
 
             </div>
 
@@ -1886,137 +1081,226 @@
 
 
 
-<!-- =========================================================
-     CHASSIS SETUP
-========================================================== -->
+<!-- =========================
+     SPECIFICATION
+========================= -->
 
-<section class="setup">
+<section id="specification">
 
-    <div class="container">
+    <div class="section-title">
 
-        <div class="section-kicker">
-            Gemzoe Motorsport
+        <div class="section-label">
+            Specification
         </div>
 
-        <h2 class="section-title">
-            Documented chassis setup.
+        <h2>
+            Built to Drive
         </h2>
 
-        <p class="section-intro">
-
-            The surviving Gemzoe Motorsport setup sheet records
-            the car as a Superlight R500-specification setup with
-            Nitron NTR1 dampers and an aero chassis setup.
-
-        </p>
+    </div>
 
 
-        <div class="setup-grid">
-
-            <div class="setup-card">
-
-                <div class="setup-value">
-                    563.5 kg
-                </div>
-
-                <div class="setup-label">
-                    Without driver
-                </div>
-
-            </div>
+    <div class="spec-grid">
 
 
-            <div class="setup-card">
+        <div class="spec-card">
 
-                <div class="setup-value">
-                    657.0 kg
-                </div>
+            <h3>
+                ENGINE & DRIVETRAIN
+            </h3>
 
-                <div class="setup-label">
-                    Driver + ¾ tank
-                </div>
+            <ul>
 
-            </div>
+                <li>
+                    Caterham 6-speed gearbox
+                </li>
 
+                <li>
+                    Dry sump oil / lubrication system
+                </li>
 
-            <div class="setup-card">
+                <li>
+                    3.62 Ford Sierra-type final drive
+                </li>
 
-                <div class="setup-value">
-                    185
-                </div>
+                <li>
+                    Limited-slip differential
+                </li>
 
-                <div class="setup-label">
-                    Front tyre width
-                </div>
+                <li>
+                    Radtec alloy radiator
+                </li>
 
-            </div>
+                <li>
+                    Spal cooling fan
+                </li>
 
-
-            <div class="setup-card">
-
-                <div class="setup-value">
-                    215
-                </div>
-
-                <div class="setup-label">
-                    Rear tyre width
-                </div>
-
-            </div>
-
-
-            <div class="setup-card">
-
-                <div class="setup-value">
-                    16 PSI
-                </div>
-
-                <div class="setup-label">
-                    Front pressure
-                </div>
-
-            </div>
-
-
-            <div class="setup-card">
-
-                <div class="setup-value">
-                    16 PSI
-                </div>
-
-                <div class="setup-label">
-                    Rear pressure
-                </div>
-
-            </div>
-
-
-            <div class="setup-card">
-
-                <div class="setup-value">
-                    ≈ -2⅛°
-                </div>
-
-                <div class="setup-label">
-                    Front camber
-                </div>
-
-            </div>
-
-
-            <div class="setup-card">
-
-                <div class="setup-value">
-                    ≈ -1½°
-                </div>
-
-                <div class="setup-label">
-                    Rear camber
-                </div>
-
-            </div>
+            </ul>
 
         </div>
+
+
+
+        <div class="spec-card">
+
+            <h3>
+                EXHAUST
+            </h3>
+
+            <ul>
+
+                <li>
+                    Powerspeed exhaust system
+                </li>
+
+                <li>
+                    4-into-2 manifold
+                </li>
+
+                <li>
+                    7-inch stainless-steel silencer
+                </li>
+
+                <li>
+                    Repackable silencer
+                </li>
+
+                <li>
+                    Large-bore 4:1 exhaust configuration
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="spec-card">
+
+            <h3>
+                SUSPENSION & WHEELS
+            </h3>
+
+            <ul>
+
+                <li>
+                    Wide-track front suspension
+                </li>
+
+                <li>
+                    Aero-section front wishbones
+                </li>
+
+                <li>
+                    Adjustable rear anti-roll bar
+                </li>
+
+                <li>
+                    Rial staggered wheels
+                </li>
+
+                <li>
+                    Avon ZZS tyres
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="spec-card">
+
+            <h3>
+                BRAKES
+            </h3>
+
+            <ul>
+
+                <li>
+                    Uprated brake master cylinder
+                </li>
+
+                <li>
+                    Four-pot front brake calipers
+                </li>
+
+                <li>
+                    Vented front brake discs
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="spec-card">
+
+            <h3>
+                CARBON FIBRE
+            </h3>
+
+            <ul>
+
+                <li>
+                    Carbon-fibre nosecone
+                </li>
+
+                <li>
+                    Visible carbon nose band
+                </li>
+
+                <li>
+                    Unpainted carbon front wings
+                </li>
+
+                <li>
+                    Unpainted carbon rear wings
+                </li>
+
+                <li>
+                    Carbon wing protectors
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="spec-card">
+
+            <h3>
+                SUPERLIGHT DETAILS
+            </h3>
+
+            <ul>
+
+                <li>
+                    Lightweight Caterham construction
+                </li>
+
+                <li>
+                    Exposed cockpit
+                </li>
+
+                <li>
+                    Roll-over protection
+                </li>
+
+                <li>
+                    Driver-focused interior
+                </li>
+
+                <li>
+                    Minimal weight and maximum feedback
+                </li>
+
+            </ul>
+
+        </div>
+
 
     </div>
 
@@ -2024,376 +1308,94 @@
 
 
 
-<!-- =========================================================
-     DOCUMENTED HISTORY
-========================================================== -->
+<!-- =========================
+     PERFORMANCE
+========================= -->
 
-<section
-    id="history"
-    class="history"
->
+<section id="performance">
 
-    <div class="container">
+    <div class="section-title">
 
-        <div class="section-kicker">
-            Documented Development
+        <div class="section-label">
+            Rolling Road
         </div>
 
-        <h2 class="section-title">
-            The history file.
+        <h2>
+            Emerald · 17 March 2017
         </h2>
 
-        <p class="section-intro">
-
-            A substantial collection of invoices, setup sheets
-            and technical documents records the continued
-            development of C7 DFH.
-
+        <p>
+            Recorded during a rolling-road session at
+            Emerald M3D.
         </p>
 
+    </div>
 
-        <div class="timeline">
 
+    <div class="performance-grid">
 
-            <div class="timeline-item">
 
-                <div class="timeline-year">
-                    2001
-                </div>
+        <div class="performance-card">
 
-                <div class="timeline-content">
+            <strong>
+                214.8
+            </strong>
 
-                    <h3>
-                        Purchased
-                    </h3>
-
-                    <p>
-                        C7 DFH purchased on 1 February 2001.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2010
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Early documented development
-                    </h3>
-
-                    <p>
-
-                        Fuel-system components, Brise K-Series
-                        starter motor, oil-pressure instrumentation
-                        and additional lightweight components
-                        documented.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2011
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Driver comfort and induction
-                    </h3>
-
-                    <p>
-
-                        Caterham heater retrofit, Pipercross
-                        induction components, lighting and
-                        additional detail work documented.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2012
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Brakes, wheels and lubrication
-                    </h3>
-
-                    <p>
-
-                        Caterham race brake master cylinder,
-                        Rial 13-inch wheels, Laminova oil cooler
-                        and substantial Caterham dry-sump
-                        components appear in the history.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2013
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Suspension and engine management
-                    </h3>
-
-                    <p>
-
-                        Custom Nitron suspension documentation,
-                        Emerald K6 ECU work, Piper components
-                        and further steering development.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2014
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Dry sump and brake development
-                    </h3>
-
-                    <p>
-
-                        Caterham dry-sump pan, HiSpec wheel
-                        spacing components, Reverie airbox parts
-                        and rear brake hard-line conversion.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2015
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Fuelling and lubrication
-                    </h3>
-
-                    <p>
-
-                        Additional dry-sump components and
-                        genuine Bosch 36 lb/hr fuel injectors
-                        documented.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2016
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Chassis, seats and pump work
-                    </h3>
-
-                    <p>
-
-                        Titan pump refurbishment, Tillett
-                        carbon/Kevlar seat work, DPR De Dion
-                        shims, ignition and dry-sump maintenance.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2017
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        214.8 bhp
-                    </h3>
-
-                    <p>
-
-                        Magnecor 8.5 mm ignition leads,
-                        Avon ZZS tyres and an Emerald
-                        rolling-road test recording
-                        214.8 bhp corrected engine power.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2018
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Rolling-road development
-                    </h3>
-
-                    <p>
-
-                        Caterham LED rear lighting,
-                        lambda sensor replacement and
-                        five hours of rolling-road work
-                        at Gemzoe Motorsport.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2021
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Professional chassis setup
-                    </h3>
-
-                    <p>
-
-                        Gemzoe Motorsport chassis setup,
-                        corner weighting and geometry work.
-                        Measured vehicle weight:
-                        563.5 kg without driver.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2022
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Lightweight battery
-                    </h3>
-
-                    <p>
-
-                        Odyssey PC680 Extreme battery
-                        documented, along with further
-                        exhaust/silencer maintenance.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2023
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Continued development
-                    </h3>
-
-                    <p>
-
-                        Genuine Caterham nosecone grille
-                        components, anti-roll-bar drop links
-                        and continued repackable silencer
-                        maintenance.
-
-                    </p>
-
-                </div>
-
-            </div>
+            <span>
+                Corrected BHP
+            </span>
 
         </div>
+
+
+        <div class="performance-card">
+
+            <strong>
+                216.6
+            </strong>
+
+            <span>
+                Engine BHP
+            </span>
+
+        </div>
+
+
+        <div class="performance-card">
+
+            <strong>
+                173.6
+            </strong>
+
+            <span>
+                Wheel BHP
+            </span>
+
+        </div>
+
+
+        <div class="performance-card">
+
+            <strong>
+                196.7
+            </strong>
+
+            <span>
+                Torque Nm
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="dyno-note">
+
+        Maximum recorded power at approximately
+        <strong>7,820 rpm</strong>.
+        The original rolling-road printout is included in
+        the gallery below.
 
     </div>
 
@@ -2401,531 +1403,445 @@
 
 
 
-<!-- =========================================================
+<!-- =========================
+     VIDEOS
+========================= -->
+
+<section id="videos">
+
+    <div class="section-title">
+
+        <div class="section-label">
+            On Film
+        </div>
+
+        <h2>
+            Caterham Videos
+        </h2>
+
+    </div>
+
+
+    <div class="video-grid">
+
+
+        <div class="video">
+
+            <iframe
+                src="https://www.youtube.com/embed/fwG_DXxInQc"
+                title="Caterham C7 DFH video 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+
+        <div class="video">
+
+            <iframe
+                src="https://www.youtube.com/embed/l7ipc74a4bQ"
+                title="Caterham C7 DFH video 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+
+        <div class="video">
+
+            <iframe
+                src="https://www.youtube.com/embed/QVEGFBSh-7s"
+                title="Caterham C7 DFH video 3"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
      GALLERY
-========================================================== -->
+========================= -->
 
-<section
-    id="gallery"
-    class="gallery-section"
->
+<section id="gallery">
 
-    <div class="container">
+    <div class="section-title">
 
-        <div class="section-kicker">
-            Photo Archive
+        <div class="section-label">
+            Gallery
         </div>
 
-        <h2 class="section-title">
-            Through the years.
+        <h2>
+            Through the Years
         </h2>
 
-        <p class="section-intro">
-
-            The photographic history of C7 DFH will grow
-            as more photographs are catalogued and added.
-
+        <p>
+            From its earlier yellow specification through
+            to the green Superlight seen today.
         </p>
 
+    </div>
 
-        <div
-            id="galleryStatus"
-            class="gallery-status"
-        >
+
+    <div
+        id="photoGallery"
+        class="gallery"
+    >
+
+        <div class="gallery-loading">
             Loading photographs…
         </div>
 
-
-        <div
-            id="galleryGrid"
-            class="gallery"
-        ></div>
-
     </div>
 
 </section>
 
 
 
-<!-- =========================================================
-     FOOTER
-========================================================== -->
-
-<footer>
-
-    <div class="container">
-
-        <div class="footer-seven">
-            7
-        </div>
-
-        <div class="footer-title">
-            Caterham Superlight · C7 DFH
-        </div>
-
-        <div class="footer-domain">
-            caterhamsuperlight.co.uk
-        </div>
-
-    </div>
-
-</footer>
-
-
-
-<!-- =========================================================
+<!-- =========================
      LIGHTBOX
-========================================================== -->
+========================= -->
 
 <div
     id="lightbox"
     class="lightbox"
 >
 
-    <button
-        id="lightboxClose"
+    <div
         class="lightbox-close"
-        aria-label="Close image"
+        onclick="closeLightbox()"
     >
         ×
-    </button>
-
-
-    <button
-        id="lightboxPrev"
-        class="lightbox-prev"
-        aria-label="Previous image"
-    >
-        ‹
-    </button>
-
+    </div>
 
     <img
         id="lightboxImage"
         src=""
-        alt="Caterham Superlight"
+        alt="Caterham photograph"
     >
-
-
-    <button
-        id="lightboxNext"
-        class="lightbox-next"
-        aria-label="Next image"
-    >
-        ›
-    </button>
 
 </div>
 
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <strong>
+        Caterham Superlight · C7 DFH
+    </strong>
+
+    <br>
+
+    A photographic history of the car.
+
+</footer>
+
+
+
 <script>
 
-    /* =========================================================
-       AUTOMATIC PHOTO FOLDER GALLERY
+/* ==========================================================
+   AUTOMATIC GITHUB PHOTO GALLERY
 
-       Repository:
-       andyhorridge/caterhamsuperlight
+   Repository:
+   andyhorridge / caterhamsuperlight
 
-       Folder:
-       photos
+   This reads the /photos folder directly from GitHub.
 
-       Accepted:
-       photo001.jpg
-       photo002.jpeg
-       photo003.png
-       photo004.webp
-       etc.
+   photo001 is deliberately excluded.
+========================================================== */
 
-       Images are automatically sorted by their number.
-    ========================================================== */
 
+const githubUser =
+    "andyhorridge";
 
-    const githubUser = "andyhorridge";
+const githubRepo =
+    "caterhamsuperlight";
 
-    const githubRepo = "caterhamsuperlight";
+const photoFolder =
+    "photos";
 
-    const githubFolder = "photos";
 
+const gallery =
+    document.getElementById(
+        "photoGallery"
+    );
 
-    const galleryGrid =
-        document.getElementById("galleryGrid");
 
-    const galleryStatus =
-        document.getElementById("galleryStatus");
+async function loadGallery() {
 
+    const apiURL =
+        `https://api.github.com/repos/${githubUser}/${githubRepo}/contents/${photoFolder}`;
 
-    let galleryImages = [];
 
-    let currentImageIndex = 0;
+    try {
 
-
-
-    function getPhotoNumber(filename) {
-
-        const match =
-            filename.match(/(\d+)/);
-
-        if (!match) {
-            return 999999;
-        }
-
-        return parseInt(match[1], 10);
-
-    }
-
-
-
-    function isImage(filename) {
-
-        return /\.(jpg|jpeg|png|webp)$/i
-            .test(filename);
-
-    }
-
-
-
-    async function loadGallery() {
-
-        const apiUrl =
-            `https://api.github.com/repos/${githubUser}/${githubRepo}/contents/${githubFolder}`;
-
-
-        try {
-
-            const response =
-                await fetch(apiUrl);
-
-
-            if (!response.ok) {
-
-                throw new Error(
-                    "Photo folder not available yet."
-                );
-
-            }
-
-
-            const files =
-                await response.json();
-
-
-            galleryImages =
-                files
-                    .filter(file =>
-                        file.type === "file" &&
-                        isImage(file.name)
-                    )
-
-                    .sort((a, b) =>
-                        getPhotoNumber(a.name) -
-                        getPhotoNumber(b.name)
-                    );
-
-
-            if (
-                galleryImages.length === 0
-            ) {
-
-                galleryStatus.textContent =
-                    "Photos will appear here as they are added.";
-
-                return;
-
-            }
-
-
-            galleryStatus.style.display =
-                "none";
-
-
-            galleryImages.forEach(
-                (file, index) => {
-
-                    const item =
-                        document.createElement("div");
-
-                    item.className =
-                        "gallery-item";
-
-
-                    const image =
-                        document.createElement("img");
-
-                    image.src =
-                        `photos/${encodeURIComponent(file.name)}`;
-
-                    image.alt =
-                        "Caterham Superlight C7 DFH";
-
-                    image.loading =
-                        "lazy";
-
-
-                    item.appendChild(image);
-
-
-                    item.addEventListener(
-                        "click",
-                        () => {
-
-                            openLightbox(index);
-
-                        }
-                    );
-
-
-                    galleryGrid.appendChild(item);
-
+        const response =
+            await fetch(
+                apiURL,
+                {
+                    cache: "no-store"
                 }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Could not read GitHub photo folder."
             );
 
         }
 
-        catch (error) {
 
-            galleryStatus.textContent =
-                "Photo archive coming soon.";
-
-        }
-
-    }
+        const files =
+            await response.json();
 
 
+        const photos =
+            files
 
-    /* =========================================================
-       LIGHTBOX
-    ========================================================== */
+            .filter(file => {
 
-
-    const lightbox =
-        document.getElementById("lightbox");
-
-    const lightboxImage =
-        document.getElementById("lightboxImage");
-
-    const lightboxClose =
-        document.getElementById("lightboxClose");
-
-    const lightboxPrev =
-        document.getElementById("lightboxPrev");
-
-    const lightboxNext =
-        document.getElementById("lightboxNext");
+                if (
+                    file.type !== "file"
+                ) {
+                    return false;
+                }
 
 
+                const filename =
+                    file.name.toLowerCase();
 
-    function showLightboxImage() {
+
+                const validImage =
+                    /\.(jpg|jpeg|png|webp)$/i
+                    .test(filename);
+
+
+                const numberedPhoto =
+                    /^photo\d+\.(jpg|jpeg|png|webp)$/i
+                    .test(filename);
+
+
+                /*
+                   Explicitly remove photo001,
+                   regardless of image extension.
+                */
+
+                const isPhoto001 =
+                    /^photo0*1\.(jpg|jpeg|png|webp)$/i
+                    .test(filename);
+
+
+                return (
+                    validImage &&
+                    numberedPhoto &&
+                    !isPhoto001
+                );
+
+            })
+
+
+            .sort((a,b) => {
+
+                const numberA =
+                    parseInt(
+                        a.name.match(/\d+/)[0],
+                        10
+                    );
+
+                const numberB =
+                    parseInt(
+                        b.name.match(/\d+/)[0],
+                        10
+                    );
+
+                return numberA - numberB;
+
+            });
+
+
+        gallery.innerHTML = "";
+
 
         if (
-            galleryImages.length === 0
+            photos.length === 0
         ) {
+
+            gallery.innerHTML =
+                `
+                <div class="gallery-loading">
+                    No photographs found.
+                </div>
+                `;
+
             return;
+
         }
 
 
-        const file =
-            galleryImages[currentImageIndex];
+        photos.forEach(
+            photo => {
+
+                const item =
+                    document.createElement(
+                        "div"
+                    );
 
 
-        lightboxImage.src =
-            `photos/${encodeURIComponent(file.name)}`;
+                item.className =
+                    "gallery-item";
+
+
+                const image =
+                    document.createElement(
+                        "img"
+                    );
+
+
+                image.src =
+                    photo.download_url;
+
+
+                image.alt =
+                    "Caterham C7 DFH";
+
+
+                image.loading =
+                    "lazy";
+
+
+                image.onclick =
+                    () =>
+                    openLightbox(
+                        photo.download_url
+                    );
+
+
+                item.appendChild(
+                    image
+                );
+
+
+                gallery.appendChild(
+                    item
+                );
+
+            }
+        );
+
 
     }
 
+    catch(error) {
+
+        console.error(
+            error
+        );
 
 
-    function openLightbox(index) {
-
-        currentImageIndex =
-            index;
-
-        showLightboxImage();
-
-        lightbox.classList.add("open");
-
-        document.body.style.overflow =
-            "hidden";
-
-    }
-
-
-
-    function closeLightbox() {
-
-        lightbox.classList.remove("open");
-
-        document.body.style.overflow =
-            "";
+        gallery.innerHTML =
+            `
+            <div class="gallery-loading">
+                Gallery temporarily unavailable.
+            </div>
+            `;
 
     }
 
+}
 
 
-    function previousImage() {
+loadGallery();
 
-        currentImageIndex =
-            (
-                currentImageIndex - 1 +
-                galleryImages.length
-            )
-            %
-            galleryImages.length;
 
-        showLightboxImage();
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+const lightbox =
+    document.getElementById(
+        "lightbox"
+    );
+
+
+const lightboxImage =
+    document.getElementById(
+        "lightboxImage"
+    );
+
+
+function openLightbox(src) {
+
+    lightboxImage.src =
+        src;
+
+    lightbox.classList.add(
+        "active"
+    );
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+function closeLightbox() {
+
+    lightbox.classList.remove(
+        "active"
+    );
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+lightbox.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target === lightbox
+        ) {
+
+            closeLightbox();
+
+        }
 
     }
+);
 
 
+document.addEventListener(
+    "keydown",
+    function(event) {
 
-    function nextImage() {
+        if (
+            event.key === "Escape"
+        ) {
 
-        currentImageIndex =
-            (
-                currentImageIndex + 1
-            )
-            %
-            galleryImages.length;
+            closeLightbox();
 
-        showLightboxImage();
+        }
 
     }
-
-
-
-    lightboxClose.addEventListener(
-        "click",
-        closeLightbox
-    );
-
-
-    lightboxPrev.addEventListener(
-        "click",
-        previousImage
-    );
-
-
-    lightboxNext.addEventListener(
-        "click",
-        nextImage
-    );
-
-
-    lightbox.addEventListener(
-        "click",
-        event => {
-
-            if (
-                event.target === lightbox
-            ) {
-
-                closeLightbox();
-
-            }
-
-        }
-    );
-
-
-
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (
-                !lightbox.classList.contains("open")
-            ) {
-                return;
-            }
-
-
-            if (
-                event.key === "Escape"
-            ) {
-                closeLightbox();
-            }
-
-
-            if (
-                event.key === "ArrowLeft"
-            ) {
-                previousImage();
-            }
-
-
-            if (
-                event.key === "ArrowRight"
-            ) {
-                nextImage();
-            }
-
-        }
-    );
-
-
-
-    /* =========================================================
-       IPHONE SWIPE IN LIGHTBOX
-    ========================================================== */
-
-    let touchStartX = 0;
-
-
-    lightbox.addEventListener(
-        "touchstart",
-        event => {
-
-            touchStartX =
-                event.changedTouches[0].screenX;
-
-        },
-        {
-            passive: true
-        }
-    );
-
-
-    lightbox.addEventListener(
-        "touchend",
-        event => {
-
-            const touchEndX =
-                event.changedTouches[0].screenX;
-
-            const difference =
-                touchEndX - touchStartX;
-
-
-            if (
-                difference > 60
-            ) {
-
-                previousImage();
-
-            }
-
-
-            if (
-                difference < -60
-            ) {
-
-                nextImage();
-
-            }
-
-        },
-        {
-            passive: true
-        }
-    );
-
-
-
-    /* =========================================================
-       START
-    ========================================================== */
-
-    loadGallery();
+);
 
 </script>
 
